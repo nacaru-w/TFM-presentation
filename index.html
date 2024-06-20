@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Nacho Casares">
-  <title> Herramientas en el ecosistema Wikipedia   o cómo hacer 100.000 ediciones en una semana</title>
+  <title> Web and back-end utilities for Wikipedia</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -36,334 +36,230 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide">
+<section id="title-slide" data-background-image="./img/HD-hotspot-bg.png">
   <h1 class="title"><span
-class="container"><img style='max-width: 3em;' src='./img/wmes_logo.svg' /></span><br/>Herramientas
-en el ecosistema Wikipedia <span> <br/><span
-style="font-size: 0.65em;">o cómo hacer 100.000 ediciones en una
-semana</span></h1>
+class="container"><img style='max-width: 3em;' src='./img/UOC_logo.svg' /></span><br/><span style='font-size: 0.8em;'>Web
+and back-end utilities for Wikipedia<span></h1>
   <p class="author"><a href="https://es.wikipedia.org/wiki/Usuario:Nacaru">Nacho
 Casares</a></p>
 </section>
 
-<section id="section" class="slide level2">
-<h2></h2>
+<section class="slide level2">
+
 <div style="font-size:1.2em">
 <p><a
-href="https://github.com/nacaru-w"><code>https://github.com/nacaru-w</code></a></p>
+href="https://nacaru-w.github.io/memoria/memoria.pdf"><code>https://nacaru-w.github.io/memoria/memoria.pdf</code></a></p>
 </div>
 </section>
-<section id="cómo-hacer-scripts-para-wikipedia" class="slide level2">
-<h2>Cómo hacer scripts para Wikipedia</h2>
-<ul>
-<li>Wikipedia (y el resto de proyectos Wikimedia) permiten elaborar
-scripts de usuario a través de las subpáginas de ese espacio de
-nombres.</li>
-<li>Estos scripts pueden importarse través de tu página de
-<code>common.js</code> (<a
-href="https://es.wikipedia.org/wiki/Especial:MiP%C3%A1gina/common.js">es.wikimedia.org/Usuario:NOMBRE
-DE USUARIO/common.js</a>)</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<p><img data-src="./img/my_profile_screenshot.png" /></p>
-</section>
-<section class="slide level2">
-
-<p><img data-src="./img/twinkle_lite_screenshot.png" /></p>
-</section>
-<section class="slide level2">
-
-<p><img data-src="./img/commonjs_screenshot.png" /></p>
-<p>Solo hay que
-añadir<br/><code>importScript('RUTA DEL SCRIPT EN WP')</code><br/>para
-que empiece a funcionar.</p>
-</section>
-<section id="qué-es-twinkle-lite" class="slide level2">
-<h2>¿Qué es Twinkle Lite?</h2>
-<p><span style="text-align: center;"><a
-href="https://github.com/nacaru-w/twinkle-lite">https://github.com/nacaru-w/twinkle-lite</a></span></p>
-<ul>
-<li>Herramienta concebida para facilitar el mantenimiento en
-Wikipedia</li>
-<li>Basada en una herramienta homónima desarrollada en la Wikipedia
-inglesa (¡que ya tuvo un intento de integración en eswiki en
-2008!)*</li>
-<li>Escrita en <a
-href="https://es.wikipedia.org/wiki/JavaScript">JavaScript</a>, aunque
-pronto será transcluida a TS.</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>Emplea la librería <a
-href="https://github.com/wikimedia-gadgets/twinkle/wiki/morebits">Morebits</a>
-para el front-end</li>
-<li>Interacciona con la <a
-href="https://www.mediawiki.org/wiki/API:Main_page">API</a> de
-MediaWiki.</li>
-<li>En pocas palabras: <strong>lleva a cabo ediciones por el usuario que
-normalmente implican añadir Wikicódigo</strong></li>
-<li>Más información en <a
-href="https://es.wikipedia.org/wiki/Wikipedia:Twinkle_Lite">https://es.wikipedia.org/wiki/Wikipedia:Twinkle_Lite</a>
-(buscando «Twinkle Lite» en Google también sale)</li>
-</ul>
-<!-- # Instalación  {data-background-image="img/Elegant_Background-3.jpg"}
-
-## Instrucciones
-
-(Toda la información se halla en [la página de documentación en Wikipedia](https://es.wikipedia.org/wiki/Wikipedia:Twinkle_Lite#Instalaci%C3%B3n))
-
-***
-
-- Crea tu página especial `common.js`: puede hacerse a través de [este enlace](https://es.wikipedia.org/wiki/Especial:MiP%C3%A1gina/common.js)
-- Una vez creada, copia en ella la línea de código que aparece aquí ([también disponible en la documentación](https://es.wikipedia.org/wiki/Wikipedia:Twinkle_Lite#Instalaci%C3%B3n)):*
-
-<span style="font-size: 0.7em; font-family: monospace">
-    mw.loader.load("https://es.wikipedia.org/w/index.php?title=Usuario:Nacaru/twinkle-lite.js&action=raw&ctype=text/javascript");
-</span> 
-
-::: notes
-Probablemente en el futuro podrá activarse a través de la página de configuración personal
-:::
-
-*** 
-
-- Refresca la caché del navegador (Ctrl + F5 o Ctrl + R).
-
-<span style="font-size: 1.6em;">¡Ya estaría listo!</span>
-
-***
-
-Si todo se ha instalado correctamente debería de aparecer este menú en la parte superior de la interfaz:
-
-![](img/Twinkle_lite_2.png){ width=80% }
-
-***
-
-Si usas la interfaz antigua Vector 2010 o si has ocultado el menú de la derecha, las opciones de Twinkle Lite se situarán en el menú de edición superior en su lugar.
-
-![](img/Twinkle_lite_3.png){ width=80% } -->
-</section>
 <section>
-<section id="utilización" class="title-slide slide level1"
-data-background-image="img/Back3.png">
-<h1 data-background-image="img/Back3.png">Utilización</h1>
-
-</section>
-<section id="etiquetado" class="slide level2">
-<h2>Etiquetado</h2>
-<p>TL posee un módulo que incluye un catálogo de plantillas que pueden
-colocarse en el artículo.</p>
-<p><img data-src="img/tag%20module%20image.png"
-style="width:9.25em" /></p>
-<p>También incluye una opción para notificar al creador de la página,
-así como para especificar una razón.</p>
-</section>
-<section id="avisos-a-usuarios" class="slide level2">
-<h2>Avisos a usuarios</h2>
-<p>De forma similar, pueden dejarse mensajes en la página de usuario de
-forma sencilla mediante el catálogo.</p>
-<p><img data-src="img/warning%20module%20image.png"
-style="width:9.25em" /></p>
-</section>
-<section id="borrado-rápido" class="slide level2">
-<h2>Borrado rápido</h2>
-<p>Módulo para colocación de plantillas de borrado rápido, útil p. ej.
-en casos de creación de páginas vandálicas</p>
-<p><img data-src="img/speedy%20module%20image.png"
-style="width:9.25em" /></p>
-</section>
-<section id="denuncias" class="slide level2">
-<h2>Denuncias</h2>
-<p>Permite denunciar usuarios a través de un simple formulario.</p>
-<p><img data-src="img/reports%20module%20image.png"
-style="width:9.25em" /></p>
-<p>El <em>script</em> se encarga automáticamente de colocar la denuncia
-en el tablón adecuado.</p>
-</section>
-<section id="protección-de-páginas" class="slide level2">
-<h2>Protección de páginas</h2>
-<p>Muestra el estado de protección de una página y permite solicitar su
-protección.</p>
-<p><img data-src="img/protection%20module%20image.png"
-style="width:9.25em" /></p>
-<p>También se puede utilizar para solicitar la
-<strong>desprotección</strong> de una página.</p>
-</section>
-<section id="consultas-de-borrado" class="slide level2">
-<h2>Consultas de borrado</h2>
-<p>Simplifica todo el proceso de apertura de una consulta de borrado a
-través de un formulario.</p>
-<p><img data-src="img/cdb%20module%20image.png"
-style="width:9.25em" /></p>
-<p>Al igual que otros módulos, incluye una opción para dejar un mensaje
-de aviso en su PD a la persona que creó la página.</p>
-<!-- # Futuro {data-background-image="img/Elegant_Background-2.jpg"}
-
-## Ideas
-
-- Añadir características que ayuden al mantenimiento de tareas específicas de los bibliotecarios.
-- Habilitar la posibilidad de activar herramienta en el menú de configuración de usuario a través de [MediaWiki:Gadgets-definition](https://es.wikipedia.org/wiki/MediaWiki:Gadgets-definition) (hay una solicitud procesándose en el tablón de editores de interfaz)
-
-# Fin
-
-## Enlaces
-
-- [Página de documentación en eswiki](https://es.wikipedia.org/wiki/Wikipedia:Twinkle_Lite)
-- [Repositorio público en GitHub](https://github.com/nacaru-w/twinkle-lite)
-- [Página de Wikipedia en la que se encuentra el código concatenado](https://es.wikipedia.org/wiki/Usuario:Nacaru/twinkle-lite.js)
-
-## Atribución de imágenes
-
-- [Back3 de pbgtree](https://commons.wikimedia.org/wiki/File:Back3.png) (CC BY-SA 4.0)
-- [Elegant Background-3](https://commons.wikimedia.org/wiki/File:Elegant_Background-3.jpg) y [Elegant Background-2](https://commons.wikimedia.org/wiki/File:Elegant_Background-2.jpg) de Nick Roach (GNU) -->
-</section></section>
-<section>
-<section id="cómo-hacer-100.000-ediciones-en-una-semana"
-class="title-slide slide level1"
+<section id="introduction" class="title-slide slide level1"
 data-background-image="img/Elegant_Background-2.jpg">
-<h1 data-background-image="img/Elegant_Background-2.jpg">Cómo hacer
-100.000 ediciones en una semana</h1>
-
-</section>
-<section id="bots" class="slide level2">
-<h2>Bots</h2>
-<p><span style="text-align: center;"><a
-href="https://es.wikipedia.org/wiki/Wikipedia:Bot">https://es.wikipedia.org/wiki/Wikipedia:Bot</a></span></p>
-<ul>
-<li>Son cuentas de usuario que poseen el flag «bot».</li>
-<li>Esto implica un <em>ratelimit</em> ilimitado.</li>
-<li>Requieren de <a
-href="https://es.wikipedia.org/wiki/Wikipedia:Bot/Autorizaciones">autorización
-por consenso comunitario</a></li>
-<li>Implica llevar a cabo ediciones de prueba que deben ser revisadas
-por la comunidad</li>
-</ul>
+<h1
+data-background-image="img/Elegant_Background-2.jpg">Introduction</h1>
+<p><img data-src="./img/Wikipedia%20logo%20version%202.svg"
+width="200" /></p>
 </section>
 <section class="slide level2">
 
 <ul>
-<li>Existen numerosos <em>frameworks</em> que permiten gestionar más
-fácilmente las ediciones en Wikipedia y las interacciones con la API de
-MediaWiki.</li>
-<li>El más popular: <a
-href="https://pypi.org/project/pywikibot/">pywikibot</a> (<a
-href="https://www.mediawiki.org/wiki/Manual:Creating_a_bot#Programming_languages_and_libraries">lista
-completa</a>)</li>
+<li>Wikipedia: free encyclopedia that anyone can edit</li>
+<li>Depends on volunteer contributions, mostly</li>
+<li>Low number of technical contributors</li>
+<li>High demand for this kind of support</li>
 </ul>
-</section>
-<section class="slide level2">
-
-<figure>
-<img data-src="./img/bot_development_cycle.png"
-alt="Diagrama de flujo para la implementación de bots" />
-<figcaption aria-hidden="true">Diagrama de flujo para la implementación
-de bots</figcaption>
-</figure>
-</section>
-<section id="por-qué-hacer-un-bot" class="slide level2">
-<h2>¿Por qué hacer un bot?</h2>
-<ul>
-<li>En agosto de 2023 se llevó a cabo una <a
-href="https://es.wikipedia.org/wiki/Wikipedia:Votaciones/2023/Sobre_los_enlaces_internos_en_las_fechas">votación</a>
-por decisión comunitaria.</li>
-<li>Implicaba eliminar <em>todos</em> los enlaces internos a fechas en
-artículos <strong>no relacionados con el calendario</strong>.</li>
-<li>Trabajo manual elevado.</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>Debates al respecto en el Café: tarea difícil de implementar, en
-Wikipedia hay muchas formas de enlazar fechas internamente.</li>
-<li>Primeros pasos: script de usuario <a
-href="https://es.wikipedia.org/wiki/Usuario:Nacaru/date-link-remover.js"><code>date-link-remover.js</code></a></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<p><img data-src="./img/date-link-remover_demo.png" /></p>
-</section>
-<section id="nacarubot" class="slide level2">
-<h2>Nacarubot</h2>
-<p><span style="text-align: center"><a
-href="https://github.com/nacaru-w/NacaruBot">https://github.com/nacaru-w/NacaruBot</a></span></p>
-<ul>
-<li>Node.js (TypeScript)</li>
-<li>Framework para bots: <a
-href="https://www.npmjs.com/package/mwn">mwn</a></li>
-<li><a
-href="https://github.com/nacaru-w/NacaruBot/blob/main/src/regexes/regexes.ts">Expresiones
-regulares!!</a> (gracias a <a
-href="https://es.wikipedia.org/wiki/Usuario:-sasha-">-sasha-</a>)</li>
-<li><strong>Muchos tests!!!</strong></li>
-</ul>
-</section>
-<section id="más-seguridad" class="slide level2">
-<h2>Más seguridad</h2>
-<ul>
-<li>Evita ciertas categorías (tablas anuales, calendario, celebraciones
-del día, efemérides no oficiales, días)</li>
-<li>Posee una regex específica para títulos.</li>
-<li>Existe una <a
-href="https://es.wikipedia.org/wiki/Usuario:NacaruBot/exceptions.json">lista
-pública de excepciones</a> guardada como <code>JSON</code> que pueden
-actualizar los administradores.</li>
-</ul>
-</section>
-<section id="cómo-actúa" class="slide level2">
-<h2>Cómo actúa</h2>
-<ul>
-<li>Hace una petición a la API de MediaWiki que devuelve 50 artículos
-pseudoaleatorios.</li>
-<li>Analiza los títulos a través de una expresión regular para descartar
-artículos relacionados con el calendario.</li>
-<li>Analiza el texto para ver si hay enlaces internos a fecha.</li>
-<li>Aplica las expresiones regulares y devuelve el string con las
-modificaciones.</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<p><img data-src="./img/bot.png" /></p>
 </section></section>
 <section>
-<section id="fin" class="title-slide slide level1">
-<h1>Fin</h1>
+<section id="objectives" class="title-slide slide level1"
+data-background-image="img/Elegant_Background-3.jpg">
+<h1 data-background-image="img/Elegant_Background-3.jpg">Objectives</h1>
 
 </section>
-<section id="enlaces" class="slide level2">
-<h2>Enlaces</h2>
+<section class="slide level2">
+
 <ul>
-<li><a
-href="https://es.wikipedia.org/wiki/Wikipedia:Twinkle_Lite">Página de
-documentación de Twinkle Lite en eswiki</a></li>
-<li><a href="https://github.com/nacaru-w/twinkle-lite">Repositorio
-público de Twinkle Lite en GitHub</a></li>
-<li><a href="https://github.com/nacaru-w/NacaruBot">Repositorio público
-de NacaruBot en GitHub</a></li>
-<li><a
-href="https://es.wikipedia.org/wiki/Usuario:Nacaru/twinkle-lite.js">Página
-de Wikipedia en la que se encuentra el código de Twinkle Lite
-concatenado</a></li>
-</ul>
-</section>
-<section id="atribución-de-imágenes" class="slide level2">
-<h2>Atribución de imágenes</h2>
-<ul>
-<li><a href="https://commons.wikimedia.org/wiki/File:Back3.png">Back3 de
-pbgtree</a> (CC BY-SA 4.0)</li>
-<li><a
-href="https://commons.wikimedia.org/wiki/File:Elegant_Background-3.jpg">Elegant
-Background-3</a> y <a
-href="https://commons.wikimedia.org/wiki/File:Elegant_Background-2.jpg">Elegant
-Background-2</a> de Nick Roach (GNU)</li>
+<li>To provide the Spanish Wikipedia with a community-supported bot that
+applies MoS rules</li>
+<li>To build a website that the LGBT+ WikiProject can use to display
+their work, common goals and achievements.</li>
 </ul>
 </section></section>
+<section>
+<section id="context-and-justification" class="title-slide slide level1"
+data-background-image="img/Elegant_Background-7.jpg">
+<h1 data-background-image="img/Elegant_Background-7.jpg">Context and
+justification</h1>
+
+</section>
+<section id="bot" class="slide level2">
+<h2>Bot</h2>
+<ul>
+<li>Users invest a significant amount of time applying Manual of Style
+(MoS) rules.</li>
+<li>Many of these rules can be applied automatically through technical
+means.</li>
+<li>Less time dedicated to implementing MoS means more time creating
+content → primary goal of the encyclopedia</li>
+</ul>
+</section>
+<section id="lgbt-wikiproject-website" class="slide level2">
+<h2>LGBT+ WikiProject website</h2>
+<ul>
+<li>Group of users dedicated to improving LGBT+ content on the Spanish
+Wikipedia</li>
+<li>Low amount of technical editors among them</li>
+<li>Other user groups already have their own webpage</li>
+</ul>
+</section></section>
+<section>
+<section id="lgbt-wikiproject-website-1"
+class="title-slide slide level1" data-background-color="aliceblue">
+<h1 data-background-color="aliceblue">LGBT+ WikiProject website</h1>
+<p><img data-src="./img/barba.svg" width="200" /></p>
+</section>
+<section class="slide level2">
+
+<p><a
+href="https://wmlgbt-es-web.toolforge.org">https://wmlgbt-es-web.toolforge.org</a></p>
+</section>
+<section class="slide level2">
+
+<p><a
+href="https://github.com/nacaru-w/WikiprojectLGBT-Webpage">https://github.com/nacaru-w/WikiprojectLGBT-Webpage</a></p>
+</section>
+<section id="design-web-neobrutalism" class="slide level2"
+data-background-color="whitesmoke">
+<h2 data-background-color="whitesmoke">Design: web neobrutalism</h2>
+<p><img data-src="./img/main_page_screenshot.png" /></p>
+</section>
+<section id="section" class="slide level2"
+data-background-color="whitesmoke">
+<h2 data-background-color="whitesmoke"></h2>
+<p><img data-src="./img/blog_element.png" style="width:16em" /></p>
+</section>
+<section id="section-1" class="slide level2"
+data-background-color="whitesmoke">
+<h2 data-background-color="whitesmoke"></h2>
+<p><img data-src="./img/guitar_element.png" style="width:18em" /></p>
+</section>
+<section id="section-2" class="slide level2"
+data-background-color="whitesmoke">
+<h2 data-background-color="whitesmoke"></h2>
+<p><img data-src="./img/graph_element.png" style="width:16em" /></p>
+</section>
+<section id="characteristics" class="slide level2">
+<h2>Characteristics</h2>
+<ul>
+<li>Built using <a href="https://angular.dev/">Angular 17.3</a></li>
+<li>Single-page application (SPA)</li>
+<li>Smooth transitions</li>
+</ul>
+</section>
+<section id="technologies" class="slide level2">
+<h2>Technologies</h2>
+<ul>
+<li>Uses <a href="https://getbootstrap.com/">Bootstrap</a></li>
+<li>Hosted in <a href="https://admin.toolforge.org/">Toolforge</a></li>
+<li>Interacts with <a
+href="https://www.mediawiki.org/wiki/API:Main_page">MediaWiki
+API</a></li>
+<li>Has its own database (<a
+href="https://mariadb.org/">MariaDB</a>)</li>
+<li>Authentication via <a
+href="https://www.mediawiki.org/wiki/OAuth/For_Developers">MediaWiki
+OAuth</a></li>
+<li>Uses <a
+href="https://www.npmjs.com/package/@angular/animations">Angular
+Animations</a></li>
+</ul>
+</section>
+<section id="architecture" class="slide level2">
+<h2>Architecture</h2>
+<p><img data-src="./img/lgbt_website_architecture_new.png" /></p>
+</section>
+<section id="blog-component" class="slide level2">
+<h2>Blog component</h2>
+<p><img data-src="./img/blog_component.png" style="width:16em" /></p>
+</section>
+<section id="stats-component" class="slide level2">
+<h2>Stats component</h2>
+<p><img data-src="./img/stats_component.png" style="width:16em" /></p>
+</section>
+<section id="form-component" class="slide level2">
+<h2>Form component</h2>
+<p><img data-src="./img/form_component.png" style="width:16em" /></p>
+</section>
+<section id="blog-admin-panel-component" class="slide level2">
+<h2>Blog admin panel component</h2>
+<p><img data-src="./img/blog_admin_panel.png" style="width:16em" /></p>
+</section>
+<section id="blog-edit-component" class="slide level2">
+<h2>Blog edit component</h2>
+<p><img data-src="./img/blog_edit_component.png"
+style="width:16em" /></p>
+</section>
+<section id="api-interactions" class="slide level2">
+<h2>API interactions</h2>
+<p><img data-src="./img/api_interactions.png" style="width:18em" /></p>
+</section></section>
+<section>
+<section id="manual-of-style-bot" class="title-slide slide level1"
+data-background-color="lightgray">
+<h1 data-background-color="lightgray">Manual of Style Bot</h1>
+<p><img data-src="./img/cyan-bot.svg" /></p>
+</section>
+<section class="slide level2">
+
+<p><a
+href="https://es.wikipedia.org/wiki/Usuario:NacaruBot">https://es.wikipedia.org/wiki/Usuario:NacaruBot</a></p>
+</section>
+<section class="slide level2">
+
+<p><a
+href="https://github.com/nacaru-w/NacaruBot">https://github.com/nacaru-w/NacaruBot</a></p>
+</section>
+<section id="asking-for-permission" class="slide level2">
+<h2>Asking for permission</h2>
+<p>Bots need community authorisation first <img
+data-src="./img/bot_development_cycle.png" /></p>
+</section>
+<section id="technologies-1" class="slide level2">
+<h2>Technologies</h2>
+<ul>
+<li>Uses <a href="https://nodejs.org/en">node.js</a></li>
+<li>Uses <a href="https://www.npmjs.com/package/mwn">mwn</a>, a
+comprehensive bot framework</li>
+<li>Written in TypeScript</li>
+<li>Interacts through the <a
+href="https://www.mediawiki.org/wiki/API:Main_page">MediaWiki
+API</a></li>
+<li>Thorough log of all the actions</li>
+</ul>
+</section>
+<section id="architecture-1" class="slide level2">
+<h2>Architecture</h2>
+<p><img data-src="./img/bot_architecture.png" /></p>
+</section>
+<section id="action" class="slide level2">
+<h2>Action</h2>
+<p>The bot erases links to internal dates in articles that are not
+related to the calendar</p>
+<p><img data-src="./img/bot_diff_screenshot.png" /></p>
+</section>
+<section id="log" class="slide level2">
+<h2>Log</h2>
+<p>It logs every action it carries out</p>
+<p><img data-src="./img/bot.png" /></p>
+</section>
+<section class="slide level2">
+
+<p>Log is also visible on Wikipedia <img
+data-src="./img/bot_action_contribs.png" /></p>
+</section></section>
+<section id="fin" class="title-slide slide level1"
+data-background-image="./img/Back3.png">
+<h1 data-background-image="./img/Back3.png">Fin</h1>
+
+</section>
     </div>
   </div>
 
